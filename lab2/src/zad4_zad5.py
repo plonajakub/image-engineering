@@ -7,7 +7,7 @@ class Product:
         self.price = price
         self.name = name
         self.quantity = quantity
-        print('Constructed object Product({}, {}, {})'.format(self.price, self.name, self.quantity))
+        print('Constructed object ' + str(self))
 
     def __str__(self):
         return 'Product({}, {}, {})'.format(self.price, self.name, self.quantity)
@@ -26,15 +26,15 @@ class Product:
 
     def set_price(self, price):
         self.price = price
-        print('Set price, self.price = {}'.format(price))
+        print('Set price, self.price = {}'.format(self.price))
 
     def set_name(self, name):
         self.name = name
-        print('Set name, self.name = {}'.format(name))
+        print('Set name, self.name = {}'.format(self.name))
 
     def set_quantity(self, quantity):
         self.quantity = quantity
-        print('Set quantity, self.quantity = {}'.format(quantity))
+        print('Set quantity, self.quantity = {}'.format(self.quantity))
 
 
 class Shop:
@@ -101,6 +101,6 @@ if __name__ == '__main__':
     except StopIteration:
         print('Further iteration impossible')
 
-    print('Iterating over my_shop in for loop:')
+    print('Iterating over my_shop in a for loop:')
     for product in my_shop:
-        print('\t-' + str(product))
+        print('\t*' + str(product))

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7919055-61ae-40b8-ab80-d7578377dcf6" name="Default Changelist" comment="" />
+    <list default="true" id="e7919055-61ae-40b8-ab80-d7578377dcf6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/misc/zad3_files/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/misc/zad3_files/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/misc/zad3_files/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/misc/zad3_files/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zad4_zad5.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/zad4_zad5.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +20,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1ZZXOKw1mMswewSyXabFbU1cuk2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,6 +32,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -30,7 +41,7 @@
       <recent name="C:\moje_pliki\Application_Projects\Studia_VI_semestr\IOb\lab2\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.zad4_zad5">
+  <component name="RunManager" selected="Python.zad4_zad5 (1)">
     <configuration name="zad1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="lab2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -53,7 +64,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="zad2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="zad2 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="lab2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -61,12 +72,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\moje_pliki\Application_Projects\Studia_VI_semestr\IOb\lab2\src\zad2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/zad2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -119,6 +130,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="zad4_zad5 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lab2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/zad4_zad5.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="zad4_zad5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="lab2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -143,17 +176,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.zad1" />
-      <item itemvalue="Python.zad2" />
       <item itemvalue="Python.zad3" />
       <item itemvalue="Python.zad4_zad5" />
+      <item itemvalue="Python.zad2 (1)" />
+      <item itemvalue="Python.zad4_zad5 (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.zad4_zad5" />
+        <item itemvalue="Python.zad4_zad5 (1)" />
         <item itemvalue="Python.zad3" />
-        <item itemvalue="Python.zad2" />
+        <item itemvalue="Python.zad2 (1)" />
         <item itemvalue="Python.zad1" />
-        <item itemvalue="Python.zad2" />
+        <item itemvalue="Python.zad4_zad5" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +207,8 @@
       <workItem from="1585050673105" duration="3252000" />
       <workItem from="1585053955089" duration="2686000" />
       <workItem from="1585063923032" duration="616000" />
-      <workItem from="1585076189605" duration="5841000" />
+      <workItem from="1585076189605" duration="6321000" />
+      <workItem from="1585145576282" duration="2257000" />
     </task>
     <servers />
   </component>
@@ -185,46 +220,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585051947152" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585081484622">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585147694034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585081484622" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585081484622">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585147694034" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585147694034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585081484622" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585081484622">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585147694034" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585147694034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585081484622" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585081484622">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585147694034" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585147694034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585081484622" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1585079890108">
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585147694034" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1585082841692">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585079890108" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1585079890108">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585082841692" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1585082841692">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585079890108" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1585079890108">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585082841692" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1585082841692">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585079890108" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1585079890108">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585082841692" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1585082841692">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585079890108" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585082841692" />
     <state x="277" y="55" key="SettingsEditor" timestamp="1585053944001">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585053944001" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1585076235617">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1585145576243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585076235617" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585145576243" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1585079253948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -233,8 +268,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lab2$main.coverage" NAME="main Coverage Results" MODIFIED="1585051262486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lab2$zad4.coverage" NAME="zad4_zad5 Coverage Results" MODIFIED="1585081478910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/lab2$zad2__1_.coverage" NAME="zad2 Coverage Results" MODIFIED="1585052106392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/lab2$zad1.coverage" NAME="zad1 Coverage Results" MODIFIED="1585052029463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/lab2$zad3.coverage" NAME="zad3 Coverage Results" MODIFIED="1585053893108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/lab2$zad2__1_.coverage" NAME="zad2 (1) Coverage Results" MODIFIED="1585145835375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/lab2$zad4_zad5__1_.coverage" NAME="zad4_zad5 (1) Coverage Results" MODIFIED="1585147694018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/lab2$zad1.coverage" NAME="zad1 Coverage Results" MODIFIED="1585145625151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/lab2$zad3.coverage" NAME="zad3 Coverage Results" MODIFIED="1585146602815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>
