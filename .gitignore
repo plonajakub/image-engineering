@@ -72,3 +72,6 @@ fabric.properties
 
 # Virtual environment
 venv/
+
+# Custom
+lab3-repo-clone/
