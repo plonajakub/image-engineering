@@ -173,3 +173,15 @@ cv.namedWindow(label_after_compress, cv.WINDOW_NORMAL)
 cv.imshow(label_after_compress, reconstructed_img_bgr)
 cv.waitKey(0)
 cv.destroyAllWindows()
+
+
+# Notatka do zadania 4
+# Bez próbkowania: rozmiar - 15589 B, brak zauważalnej różnicy w wyglądzie
+# Co 2 piksel: rozmiar - 9224 B, brak zauważalnej różnicy w wyglądzie
+# Co 4 piksel: rozmiar - 7129 B, brak zauważalnej różnicy w wyglądzie
+# Co 64 piksel: rozmiar - 5311 B, ciężko nie zauważyć różnicy :)
+# Podsumowując, etap downsamplingu istotnie zmniejsza wielkość pliku przy niezauważalnych stratach jakości zdjęcia
+# (zakładając niewielki krok próbkowania).
+# Zbyt rzadkie próbkowanie nie przynosi znaczącego zysku w zajętości miejsca na dysku, zaś może znacznie wpłynąć
+# na jakość obrazka.
+# Wydaje się, że krok równy 4px jest krokiem dobrym (strata nie jest jeszcze widoczna).
