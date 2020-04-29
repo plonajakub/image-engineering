@@ -152,7 +152,7 @@ img_flat_concat[ifc_lim_1:ifc_lim_2] = img_Cr_ds_zz
 img_flat_concat[ifc_lim_2:ifc_lim_3] = img_Cb_ds_zz
 
 cmpsd_img_flat_concat = zlib.compress(img_flat_concat.tobytes(), level=9)
-print('Approximated size of the compressed image: {0} B'.format(len(cmpsd_img_flat_concat)))
+# print('Approximated size of the compressed image: {0} B'.format(len(cmpsd_img_flat_concat)))
 
 
 # 7'. Undo Zig Zag
@@ -192,7 +192,22 @@ r_img_Cb_ds_8b_dct = idct_on_each_block(r_img_Cb_ds_8b_dct_qr)
 
 
 # 3'. Combine 8x8 blocks to original image
-# TODO: implement
+def combine_blocks_8(img_1ch_8b, original_shape):
+    n_y_step = original_shape[0] // 8
+    n_x_step = original_shape[1] // 8
+    result = numpy.empty(shape=original_shape, dtype=numpy.uint8)
+    result_idx = 0
+    for y in range(n_y_step):
+        for x in range(n_x_step):
+            result[y * 8:(y + 1) * 8, x * 8:(x + 1) * 8] = img_1ch_8b[result_idx, :, :]
+            result_idx += 1
+    return result
+
+
+r_img_y_8blocks = combine_blocks_8(r_img_y_8b_dct, img_y.shape)
+r_img_Cr_ds_8blocks = combine_blocks_8(r_img_Cr_ds_8b_dct, img_Cr_downsample.shape)
+r_img_Cb_ds_8blocks = combine_blocks_8(r_img_Cb_ds_8b_dct, img_Cb_downsample.shape)
+
 
 # 2'. Upsampling on Cb Cr
 def upsample(downs_img, ratio):
@@ -203,14 +218,19 @@ def upsample(downs_img, ratio):
     return ups_img
 
 
-img_Cr_upsample = upsample(img_Cr_downsample, du_sample_ratio)
-img_Cb_upsample = upsample(img_Cb_downsample, du_sample_ratio)
+# img_Cr_upsample = upsample(img_Cr_downsample, du_sample_ratio)
+# img_Cb_upsample = upsample(img_Cb_downsample, du_sample_ratio)
+r_img_Cr_up = upsample(r_img_Cr_ds_8blocks, du_sample_ratio)
+r_img_Cb_up = upsample(r_img_Cb_ds_8blocks, du_sample_ratio)
 
 # 1'. Convert YCbCr to RGB
 reconstructed_img_yCrCb = numpy.empty(shape=img_yCrCb.shape, dtype=numpy.uint8)
-reconstructed_img_yCrCb[:, :, 0] = img_y
-reconstructed_img_yCrCb[:, :, 1] = img_Cr_upsample
-reconstructed_img_yCrCb[:, :, 2] = img_Cb_upsample
+# reconstructed_img_yCrCb[:, :, 0] = img_y
+# reconstructed_img_yCrCb[:, :, 1] = img_Cr_upsample
+# reconstructed_img_yCrCb[:, :, 2] = img_Cb_upsample
+reconstructed_img_yCrCb[:, :, 0] = r_img_y_8blocks
+reconstructed_img_yCrCb[:, :, 1] = r_img_Cr_up
+reconstructed_img_yCrCb[:, :, 2] = r_img_Cb_up
 
 reconstructed_img_bgr = cv.cvtColor(reconstructed_img_yCrCb, cv.COLOR_YCrCb2BGR)
 
