@@ -66,30 +66,54 @@ img_Cb_downsample = downsample(img_Cb, du_sample_ratio)
 
 
 # 3. Produce 8x8 blocks
-# def extract_blocks_8(img_1ch):
-#     n_y_step = img_1ch.shape[0] // 8
-#     n_x_step = img_1ch.shape[1] // 8
-#     blocks = numpy.empty(shape=(n_y_step * n_x_step, 8, 8), dtype=numpy.uint8)
-#     block_idx = 0
-#     for y in range(n_y_step):
-#         for x in range(n_x_step):
-#             blocks[block_idx, :, :] = img_1ch[y * 8:(y + 1) * 8, x * 8:(x + 1) * 8]
-#             block_idx += 1
-#     return blocks
-#
-#
-# img_y_8blocks = extract_blocks_8(img_y)
-# img_Cr_ds_8blocks = extract_blocks_8(img_Cr_downsample)
-# img_Cb_ds_8blocks = extract_blocks_8(img_Cb_downsample)
+def extract_blocks_8(img_1ch):
+    n_y_step = img_1ch.shape[0] // 8
+    n_x_step = img_1ch.shape[1] // 8
+    blocks = numpy.empty(shape=(n_y_step * n_x_step, 8, 8), dtype=numpy.uint8)
+    block_idx = 0
+    for y in range(n_y_step):
+        for x in range(n_x_step):
+            blocks[block_idx, :, :] = img_1ch[y * 8:(y + 1) * 8, x * 8:(x + 1) * 8]
+            block_idx += 1
+    return blocks
+
+
+img_y_8blocks = extract_blocks_8(img_y)
+img_Cr_ds_8blocks = extract_blocks_8(img_Cr_downsample)
+img_Cb_ds_8blocks = extract_blocks_8(img_Cb_downsample)
+
 
 # 4. Calculate DCT on each block
-# TODO: implement
+def dct_on_each_block(img_1ch_8b):
+    result = numpy.empty(shape=img_1ch_8b.shape, dtype=numpy.float64)
+    for i in range(img_1ch_8b.shape[0]):
+        result[i, :, :] = l4utils.dct2(img_1ch_8b[i, :, :])
+    return result
+
+
+img_y_8b_dct = dct_on_each_block(img_y_8blocks)
+img_Cr_ds_8b_dct = dct_on_each_block(img_Cr_ds_8blocks)
+img_Cb_ds_8b_dct = dct_on_each_block(img_Cb_ds_8blocks)
+
 
 # 5. Divide each block by quantisation matrix
-# TODO: implement
-
 # 6. Round each block to integers
-# TODO: implement
+def div_each_block_by_qmat(img_1ch_8b_dct, q_type, qf):
+    result = numpy.empty(shape=img_1ch_8b_dct.shape, dtype=numpy.int16)
+    for i in range(img_1ch_8b_dct.shape[0]):
+        if q_type == 'qy':
+            res = img_1ch_8b_dct[i, :, :] / l4utils.QY(qf)
+        else:
+            res = img_1ch_8b_dct[i, :, :] / l4utils.QC(qf)
+        result[i, :, :] = numpy.around(res)
+    return result
+
+
+quality_factor = 95
+img_y_8b_dct_qr = div_each_block_by_qmat(img_y_8b_dct, 'qy', quality_factor)
+img_Cr_ds_8b_dct_qr = div_each_block_by_qmat(img_Cr_ds_8b_dct, 'qc', quality_factor)
+img_Cb_ds_8b_dct_qr = div_each_block_by_qmat(img_Cb_ds_8b_dct, 'qc', quality_factor)
+
 
 # 7. Zig Zag
 def zigzag(img_1ch):
@@ -173,7 +197,6 @@ cv.namedWindow(label_after_compress, cv.WINDOW_NORMAL)
 cv.imshow(label_after_compress, reconstructed_img_bgr)
 cv.waitKey(0)
 cv.destroyAllWindows()
-
 
 # Notatka do zadania 4
 # Bez próbkowania: rozmiar - 15589 B, brak zauważalnej różnicy w wyglądzie
