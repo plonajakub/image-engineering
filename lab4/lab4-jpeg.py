@@ -162,10 +162,34 @@ print('Approximated size of the compressed image: {0} B'.format(len(cmpsd_img_fl
 # For the next step, just reuse the rounded data obtained in step 6.
 
 # 5'. Reverse division by quantisation matrix -- multiply
-# TODO: implement
+def mult_each_block_by_qmat(img_1ch_8b_dct_qr, q_type, qf):
+    result = numpy.empty(shape=img_1ch_8b_dct_qr.shape, dtype=numpy.int16)
+    for i in range(img_1ch_8b_dct_qr.shape[0]):
+        if q_type == 'qy':
+            result[i, :, :] = img_1ch_8b_dct_qr[i, :, :] * l4utils.QY(qf)
+        else:
+            result[i, :, :] = img_1ch_8b_dct_qr[i, :, :] * l4utils.QC(qf)
+    return result
+
+
+r_img_y_8b_dct_qr = mult_each_block_by_qmat(img_y_8b_dct_qr, 'qy', quality_factor)
+r_img_Cr_ds_8b_dct_qr = mult_each_block_by_qmat(img_Cr_ds_8b_dct_qr, 'qc', quality_factor)
+r_img_Cb_ds_8b_dct_qr = mult_each_block_by_qmat(img_Cb_ds_8b_dct_qr, 'qc', quality_factor)
+
 
 # 4'. Reverse DCT
-# TODO: implement
+def idct_on_each_block(img_1ch_8b_dct):
+    result = numpy.empty(shape=img_1ch_8b_dct.shape, dtype=numpy.uint8)
+    for i in range(img_1ch_8b_dct.shape[0]):
+        res = l4utils.idct2(img_1ch_8b_dct[i, :, :])
+        result[i, :, :] = numpy.around(res)
+    return result
+
+
+r_img_y_8b_dct = idct_on_each_block(r_img_y_8b_dct_qr)
+r_img_Cr_ds_8b_dct = idct_on_each_block(r_img_Cr_ds_8b_dct_qr)
+r_img_Cb_ds_8b_dct = idct_on_each_block(r_img_Cb_ds_8b_dct_qr)
+
 
 # 3'. Combine 8x8 blocks to original image
 # TODO: implement
