@@ -256,3 +256,16 @@ cv.destroyAllWindows()
 # Zbyt rzadkie próbkowanie nie przynosi znaczącego zysku w zajętości miejsca na dysku, zaś może znacznie wpłynąć
 # na jakość obrazka.
 # Wydaje się, że krok równy 4px jest krokiem dobrym (strata nie jest jeszcze widoczna).
+
+# Notatka do zadania 5
+# (próbkowanie co 4 piksele)
+# QF = 99: rozmiar - 8719 B, brak zauważalnej różnicy w wyglądzie
+# QF = 95: rozmiar - 8681 B, brak zauważalnej różnicy w wyglądzie
+# QF = 50: rozmiar - 8320 B, pojawiły się pionowe artefakty, zauważalne pogorszenie jakości
+# QF = 10: rozmiar - 7433 B, pojawiły się pionowe artefakty, obraz wyraźnie gorszej jakości
+# Wraz ze spadkiem wartości współczynnika qf maleje rozmiar zdjęcia oraz spada jego jakość.
+# Przy wysokich wartościach QF (okolice 95) spadek jakości nie jest zauważalny na pierwszy rzut oka, a nawet
+# ciężko dostrzec różnicę dokładnie analizując obraz.
+# Zaskakuje fakt, że rozmiar zdjęcia potraktowanego (uproszczonym) algorytmem jpeg jest większy, niż oryginalnie.
+# Może to wynikać ze specyfiki obrazka - algorytm kompresji akurat w tym wypadku radzi sobie lepiej
+# z obrazkiem nieprzetworzonym.
