@@ -154,6 +154,10 @@ img_flat_concat[ifc_lim_2:ifc_lim_3] = img_Cb_ds_zz
 cmpsd_img_flat_concat = zlib.compress(img_flat_concat.tobytes(), level=9)
 # print('Approximated size of the compressed image: {0} B'.format(len(cmpsd_img_flat_concat)))
 
+jpeg_img_data = img_y_8b_dct_qr.tobytes() + img_Cr_ds_8b_dct_qr.tobytes() + img_Cb_ds_8b_dct_qr.tobytes()
+cmpsd_jpeg_img_data = zlib.compress(jpeg_img_data, level=9)
+print('Approximated size of the compressed jpeg image: {0} B'.format(len(cmpsd_jpeg_img_data)))
+
 
 # 7'. Undo Zig Zag
 # We can skip it in this exercise!
