@@ -1,3 +1,5 @@
+from utils import *
+
 def mse(img1, img2):
     t_img1 = np.array(img1, dtype=np.int16).flatten()
     t_img2 = np.array(img2, dtype=np.int16).flatten()
@@ -16,7 +18,7 @@ message = encode_as_binary_array(text_to_hide)
 
 mses = []
 images = []
-f, axs = plt.subplots(9, 1, figsize=(30, 200))
+f, axs = plt.subplots(9, 1, figsize=(30, 30))
 axs = axs.ravel()
 for nbits in range(1, 9):
     image_with_message = hide_message(original_image, message, nbits)
@@ -30,3 +32,5 @@ axs[-1].set_title("MSE vs nbits")
 axs[-1].set_xlabel("nbits")
 axs[-1].set_ylabel("MSE")
 axs[-1].plot([i for i in range(1, 9)], mses)
+
+plt.show()

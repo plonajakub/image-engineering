@@ -1,3 +1,5 @@
+from utils import *
+
 original_image = load_image("images/rembrandt.png")
 message = "Ani połowy spośród was nie znam nawet do połowy tak dobrze, jak bym pragnął; a mniej niż połowę z was lubię o połowę mniej, niż zasługujecie."
 message = encode_as_binary_array(message)
